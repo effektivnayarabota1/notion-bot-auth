@@ -59,7 +59,7 @@ module.exports = async (req, res) => {
     await bot.telegram.sendMessage(userId, 'Загружаю страницы')
     for (let id of parentId) {
         const title = await discowerTitleById(notion, id)
-        await bot.telegram.sendMessage(userId, `${title.toUpperCase()}\n\`\/init ${resp.data.access_token} ${id}\``, {
+        await bot.telegram.sendMessage(userId, `*${title.toUpperCase()}*\n\`\/init ${resp.data.access_token} ${id}\``, {
             parse_mode: 'Markdown'
         })
     }
