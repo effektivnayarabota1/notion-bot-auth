@@ -63,7 +63,7 @@ module.exports = async (req, res) => {
             parse_mode: 'Markdown'
         })
     }
-    await bot.telegram.sendMessage(userId, 'Загрузил странцы. Выберите необходимую и отправьте мне. я ее закреплю')
+    await bot.telegram.sendMessage(userId, 'Загрузил странцы. Выберите необходимую и отправьте мне, я ее закреплю')
 
     res.redirect('https://t.me/NotionRabota1Bot')
 }
